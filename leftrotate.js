@@ -1,6 +1,6 @@
 function rotleft(arr,rotations){
   const rotatedArray = arr.concat();
-  for (i = 0 ; i < rotations ; i++) {
+  for (let i = 0 ; i < rotations ; i++) {
     let frontElement = rotatedArray.shift();
     rotatedArray.push(frontElement);
   }
