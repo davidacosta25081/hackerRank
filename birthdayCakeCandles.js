@@ -6,7 +6,7 @@ function birthdayCakeCandles(ar) {
       max = el;
       count = 1;
     }
-    else if (el == max) {
+    else { (el == max) 
       count += 1;
     }
     
@@ -17,7 +17,7 @@ return count;
 
 
 
-console.log(birthdayCakeCandles([1,4,4,1,5]));
+console.log(birthdayCakeCandles([1,4,4,1]));
 
 
 
