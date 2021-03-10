@@ -10,8 +10,9 @@ function getFactors(number) {
 
 Array.prototype.includesAll = function(arr1) {
   return arr1.filter(el => this.includes(el)).length == arr1.length
-                           
-}
+                           .
+
+                          }
 
 
     
