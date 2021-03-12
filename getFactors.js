@@ -33,7 +33,12 @@ function getFactors(number) {
   return Object.keys(myObj)
   }
 
-  
+  function getTotalX (a,b) {
+
+
+
+    
+  }
 
 
 
