@@ -34,8 +34,10 @@ function getFactors(number) {
   }
 
   function getTotalX (a,b) {
+    const bFactors = getCommonValues(b.map(el => getFactors(el)));
+    const commonFactors = Array.from(new Set(bFactors));
 
-
+    return commonFactors.filter(factor => getFactors(factor).includesAll(a)).length
 
     
   }
