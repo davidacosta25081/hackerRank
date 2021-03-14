@@ -6,7 +6,7 @@ function birthdayCakeCandles(ar) {
       max = el;
       count = 1;
     }
-    else { (el == max) 
+    else if  (el == max) {
       count += 1;
     }
     

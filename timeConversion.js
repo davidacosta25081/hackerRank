@@ -1,0 +1,13 @@
+function timeConversion(hour, type) {
+
+
+
+
+
+
+
+
+
+
+    
+}
