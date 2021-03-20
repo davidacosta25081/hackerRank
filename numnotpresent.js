@@ -16,3 +16,6 @@ function solution(A) {
     }
  
 }
+
+A = [1,2,3,5,6,8,9,10]
+console.log(solution(A));
