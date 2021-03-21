@@ -13,10 +13,17 @@ each element of array A is an integer within the range [−1,000,000..1,000,000]
 
 function solution(A) {
 
-
-
-
-
-
-    
+  let map = {}
+  for (let i in A){
+    if (!map[A[i]]) {
+      map[A[i]] = true;    
+    }
+  }
+  return Object.keys(map).length;    
 }
+
+
+A = [1,1,2,3,4,5,6,7,7,8,9,9,9,9]
+
+
+console.log(solution(A))
