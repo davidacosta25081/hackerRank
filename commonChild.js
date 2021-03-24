@@ -31,7 +31,9 @@ Constraints
 
 function commonChild(s1,s2) {
 
-
+  length = s1.length
+  let matrix = [Array(length + 1).fill(0)];
+  
 
     
 }
