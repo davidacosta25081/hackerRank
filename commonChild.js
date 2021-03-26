@@ -1,11 +1,3 @@
-A string is said to be a child of a another string if it can be formed by deleting 0 or more characters from the other string. 
-Letters cannot be rearranged. 
-Given two strings of equal length, what's the longest string that can be constructed such that it is a child of both?
-
-Example :
-s1 = 'ABCD'
-s2 = 'ABDC'
-
 /*
 These strings have two children with maximum length 3, ABC and ABD. 
 They can be formed by eliminating either the D or C from both strings. Return 3.
@@ -29,12 +21,26 @@ Constraints
 
 */
 
-function commonChild(s1,s2) {
+function commonChild(s1, s2) {
 
-  length1 = s1.length
-  length2 = s2.length
-  let matrix = [Array(length + 1).fill(0)];
-
-
-    
+  let length = s1.length;
+  let matrix = Array(length + 1).fill().map(()=> Array(length + 1))
+  for (let i=0; i<=length; i++) {
+    for (let j=0; j<=length; j++){
+      if (matrix[i] === 0 ||  matrix[j] === 0){
+        matrix[i][j] = 0;   
+      }else if (s1[i-1] === s2[j-1]) {
+        matrix[i][j] = matrix[i-1][j-1] + 1;
+      }else {
+        matrix[i][j] = Math.max(matrix[i][j-1] , matrix[i-1][j])
+      } 
+    }
+  }
+  return matrix[length][length];
 }
+
+
+s1 = 'ABCD'
+s2 = 'AXB'
+
+console.log(commonChild(s1,s2));
