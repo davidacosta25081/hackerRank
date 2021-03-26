@@ -30,11 +30,19 @@ Constraints
 */
 
 function commonChild(s1,s2) {
-
-  length1 = s1.length
-  length2 = s2.length
+  length = s1.length;
   let matrix = [Array(length + 1).fill(0)];
+  for (let i = 0; i<length; i++) {
+    for (let j = 0; j<length; j++){
+      if (s1[i] === s2) {
+        matrix[i+1][j+1] = matrix[i][j] + 1
+      }
 
+    }
+
+
+
+  }
 
     
 }
