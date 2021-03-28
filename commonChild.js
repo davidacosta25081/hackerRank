@@ -31,18 +31,16 @@ Constraints
 
 function commonChild(s1,s2) {
   length = s1.length;
-  let matrix = [Array(length + 1).fill(0)];
+  let matrix = [Array(length + 1).fill(0)].map(() => Array(length + 1))
   for (let i = 0; i<length; i++) {
     for (let j = 0; j<length; j++){
       if (s1[i] === s2) {
         matrix[i+1][j+1] = matrix[i][j] + 1
+      }else{
+        matrix[i+1][j+1] = Math.max(matrix[i][j-1], matrix[i-1[j]]);
       }
-
     }
-
-
-
   }
-
+  return matrix[length][length];
     
 }
