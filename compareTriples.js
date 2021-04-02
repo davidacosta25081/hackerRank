@@ -1,0 +1,8 @@
+function compareTriplets(a,b) {
+
+
+
+
+
+    
+}
