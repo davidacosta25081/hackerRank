@@ -1,14 +1,27 @@
 
 
-function phonebook(input) {
+function phonebook(mapeado, busqueda) {
    
-    let phonebook = new Map();
-    
-
-
-
-
+  if (mapeado.has(busqueda)) {
+     console.log(busqueda + ' = ' + mapeado.get(busqueda))  
+  }
 } 
+
+let paginasamarillas = new Map()
+paginasamarillas.set('Orlando', 100234322)
+paginasamarillas.set('Liliam', 2004554)
+paginasamarillas.set('Felipe', 300434343)
+paginasamarillas.set('Cristina', 100043434)
+
+phonebook(paginasamarillas, 'Felipe')
+
+
+
+
+
+
+
+
 
 
 /*
