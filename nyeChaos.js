@@ -1,23 +1,20 @@
-function nyeChaos(q){
+function nyeChaos(q) {
   let bribed = 0;
   let chaotic = false;
   for(let i=0; i < q.length - 1; i++) {  
-    if (q[i] > q[i+1]){
-      if (Math.abs(i+1 - q[i]) < 2) {
-        bribed++ 
-      }else if (Math.abs(i+1- q[i]) = 2){  
-        bribed + 2;
-      }else{
-        chaotic = true;
-      }
+    if ((q[i] - (i+1)) === 1) {
+      bribed++ 
+    }else if((q[i]-(i+1)) === 2){  
+      bribed += 2;
+    }else if((q[i]-(i+1)) > 2){  
+      chaotic = true;
     }
   }
   chaotic? console.log('Too chaotic') : console.log(bribed); 
-        
 }
 
 let line = [1,3,2,5,4,6,7,8,10,9]
-console.log(nyeChaos(line))
+nyeChaos(line)
 
 
 
